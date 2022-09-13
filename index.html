@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaky Snake</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/screen.css">
+    
+</head>
+<body>
+    
+    <main>
+        <div id="container">
+            <nav class="nav-bar">
+             <div>
+              <button class="music btn btn-info" >Music: <span id="onandoff">Off</span></button>
+             <button class="help btn btn-info" >Help</button>
+             <button class="quit btn btn-danger" style="display:none;">Quit</button> <!--style="display:none;"-->
+             </div>
+         </nav>
+           
+         <section id="splash" class="screen" >
+             <header>
+                 <h1>Sneaky Snake</h1>
+             </header>
+             <div class="input-function" id="gameboard">
+                <div class="game_level">
+                    <h3 id="difficulty">Difficulty : Easy</h3>
+                    <input type="button" class="easy btn btn-success" value="Easy" id="easy">
+                    <input type="button" class="diff btn btn-warning" value="Medium" id="diff">
+                    <input type="button" class="h_diff btn btn-danger" value="Difficult" id="h_diff">
+                </div>
+             <input type="text" id="player-0-name-input" onfocus="this.value=''" placeholder="Enter your name">
+             <button class="play-game btn btn-success" id= "player-0-join">Join</button>
+             </div>
+         </section>
+ 
+         <section id="game" class="screen" style="display:none;" >
+                <div class="wrap">
+
+                    <div class="game-over" style="display:none;" >
+                      <p class="game-over-title">Game Over</p>
+                      <p class="restart-again">Do you want to restart?</p>
+                      <div class="options">
+                        <button id="yes" class="yes">Yes</button>
+                        <button id="no" class="no">No</button>
+                      </div>
+                    </div>
+
+                
+                                   
+                    <canvas class="game-screen" id="game-screen" width="600" height="600"></canvas>
+         
+                 <div class="ctrl-panel">
+                    <div class="game-name"> 
+                        <span>Sneaky Snake</span>
+                    </div>
+            
+                    <div class="score-board">
+                        <span class="ctrl_title">ScoreBoard</span>
+                        <div id="player-board" >
+                            <h3 class="player-name">Player name:</h3>
+                            <br><p id="score" class="player-score score">Score:0</p>
+                        </div>
+                    </div>
+                        <div class="ctrl_select">
+                          <span class="ctrl_title">Let's Play</span>
+                          
+                          <div class="ctrl_game">
+                              <input type="button"  value="Start" id="start" class="btn btn-success start">
+                              <input type="button"  value="Pause" id="pause" class="btn btn-warning pause"> 
+                              <p class="start-note">Press <span class="start-highlight">Start</span> to Play</p>
+                          </div>
+                        </div>
+                </div>
+         </section>
+         <img class="background" src="media/background-grass.jpg">
+        </div>
+    </main>
+        <div id="setup-modal" class="modal fade" tabindex="-1" aria-labelledby="setupModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="setupModalLabel">Setup Instructions</h5>
+                  <button type="button" class="btn-close close-modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Please Choose one difficulty for the game and enter your name.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-modal">Close</button>
+
+                </div>
+              </div>
+            </div>   
+          </div>
+
+          
+
+          <div id="gameplay-modal" class="modal fade" tabindex="-1" aria-labelledby="gameplayModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="gameplayModalLabel">Gameplay Instructions</h5>
+                  <button type="button" class="btn-close close-modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  - Use W, S, A, D or Up, Down, Left, Right to control the direction of the Snake.<br/>
+                  - Eat fruit as much as possible.<br>
+                  - Be careful, do not eat yourself or hit the wall.<br/>
+                  - Or you will be dead!!!<br>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-modal">Close</button>
+                </div>
+              </div>
+            </div>    
+          </div>
+
+          
+<audio id="backgroundMusic" src="/music/backgroundMusic.mp3"></audio>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/game.js"></script>
+<script src="js/screen.js"></script>
+</body>
+</html>

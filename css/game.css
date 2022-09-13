@@ -1,0 +1,136 @@
+/* game screen */
+canvas{
+    /* box-shadow: black 20px 10px 50px; */
+    border: 5px solid rgb(39, 59, 8);
+    background-color: #3D6800;
+}
+
+body,div,h2,p{
+    margin: 0;
+    padding: 0;
+    
+}
+
+span{
+    color: #fff;
+    font-size: 2rem;
+
+}
+
+#score{
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    font-size: 2rem;
+    color: rgb(192, 1, 1);
+    border-bottom: 1px dotted #FFD700;
+}
+
+.wrap{
+    width: 870px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+/* player-info control panel */
+.ctrl-panel{
+    width: 260px;
+    height: 610px;
+    float: right;
+    border: 5px solid #FFD700;
+    background: #998001;
+    display: grid;
+    grid-template-rows: 20% 40% 40%;
+}
+
+.score-board,.game-name,.ctrl_select{
+    border-bottom: 2px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+}
+
+.ctrl_title{
+    display: block;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 2rem;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+.player-name{
+    padding-top: 1rem;
+    color: white;
+}
+
+.start-note{
+    padding-top: 1rem;
+}
+
+.start-highlight{
+    color: red;
+    font-size: 1rem;
+}
+
+.ctrl_game{
+    width: 170px;
+    margin: 10px auto;
+}
+
+/* game-over screen */
+.wrap{
+    position: relative;
+}
+
+.game-over {
+    position: absolute;
+    left: 35%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 200px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6rem 3rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    background: white;
+    z-index: 2;
+  }
+  .game-over-title {
+    font-size:2.5rem;
+  }
+
+  .restart-again{
+      margin-bottom: 1.5rem;
+  }
+  .yes,
+  .no {
+    background: white;
+    padding: 0.3rem 3.4rem;
+    border: 3px solid black;
+    margin: 0 1rem;
+    box-shadow: 0 0 0 black;
+    transition: all 0.2s;
+  }
+  
+  .yes:hover,
+  .no:hover {
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transform: translate(-0.4rem, -0.4rem);
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: row;
+
+  }
+  
