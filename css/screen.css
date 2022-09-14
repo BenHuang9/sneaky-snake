@@ -56,6 +56,9 @@ h1{
     margin-left: auto;
 }
 
+#difficulty{
+    font-size: 1.25rem;
+}
 .game_level{
     margin-bottom: 1rem;
 }
