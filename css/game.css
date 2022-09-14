@@ -13,7 +13,7 @@ body,div,h2,p{
 
 span{
     color: #fff;
-    font-size: 2rem;
+    font-size: 1,5rem;
 
 }
 
@@ -21,7 +21,6 @@ span{
     text-align: center;
     display: inline-block;
     width: 100px;
-    font-size: 2rem;
     color: rgb(192, 1, 1);
     border-bottom: 1px dotted #FFD700;
 }
@@ -54,11 +53,9 @@ span{
 
 .ctrl_title{
     display: block;
-    width: 200px;
     height: 30px;
     text-align: center;
     line-height: 30px;
-    font-size: 2rem;
     color: #fff;
     margin-left: auto;
     margin-right: auto;
@@ -68,6 +65,7 @@ span{
 .player-name{
     padding-top: 1rem;
     color: white;
+    font-size: 1.5rem;
 }
 
 .start-note{
@@ -79,10 +77,7 @@ span{
     font-size: 1rem;
 }
 
-.ctrl_game{
-    width: 170px;
-    margin: 10px auto;
-}
+
 
 /* game-over screen */
 .wrap{
@@ -106,7 +101,7 @@ span{
     z-index: 2;
   }
   .game-over-title {
-    font-size:2.5rem;
+    font-size:2rem;
   }
 
   .restart-again{
